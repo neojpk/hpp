@@ -1,0 +1,7 @@
+databases/**/migrations/
+node_modules
+*.env*
+.next
+.vscode/
+.idea
+prisma/dev.db
