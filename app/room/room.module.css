@@ -1,0 +1,340 @@
+.main {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.header {
+  background: rgba(49, 50, 81, 0.8);
+  display: flex;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo_container {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.profile_menu {
+  border: solid 0.25rem rgba(254, 247, 243, 0.7);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 50%;
+}
+
+.stories_container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.current_stories {
+  background: rgba(49, 50, 81, 0.8);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.current_stories h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.current_stories h4 {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+}
+
+.current_card_icon {
+  border-radius: 50%;
+  background: #313452;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current_stories_heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_stories_headers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card_container {
+  margin: 1rem 0 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards {
+  min-height: 20.625rem;
+  max-width: 15rem;
+  min-width: 15rem;
+  border-radius: 6px;
+  background: rgba(49, 50, 81, 0.8);
+  padding: 0.75rem;
+}
+
+.active_card {
+  border: solid 2px #eabd71;
+  background-color: #585a81;
+}
+
+.card_description {
+  padding: 0 0 0.75rem 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.cards_points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  row-gap: 0.75rem;
+}
+
+.story_points {
+  cursor: pointer;
+  height: 90px;
+  flex: 1 1 20%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b8bade;
+  padding: 0.5rem;
+  justify-content: space-between;
+  color: #0e1541;
+  user-select: none;
+}
+
+.story_points:active {
+  background-color: #eabd71;
+  box-shadow: inset 0px 0px 0px 2px #ab6c01;
+}
+
+.story_points p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.story_points h3 {
+  margin: 0;
+  font-size: 1.875rem;
+}
+
+.points_upper_left {
+  align-self: start;
+}
+
+.points_center {
+  align-self: center;
+}
+
+.points_bottom_right {
+  align-self: end;
+}
+
+.check_story {
+  margin-top: 0.75rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.inactive_cards {
+  color: rgba(255, 255, 255, 0.5);
+  border: solid 2px rgba(49, 50, 81, 0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.card_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inactive_card_icon {
+  border-radius: 50%;
+  background: #313452;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.btn_boolean {
+  height: 2.75rem;
+  width: 100%;
+  background: #585a81;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.participants_container {
+  background: rgba(49, 50, 81, 0.8);
+  padding: 1rem;
+  border-radius: 6px;
+  min-width: 22rem;
+}
+
+.participants_headings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.participants_headings h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0.5rem 0 0;
+}
+
+.participants {
+  padding: 0;
+}
+
+.participants li {
+  list-style: none;
+  display: flex;
+  border-bottom: 0.5px solid rgba(88, 90, 129, 0.8);
+  padding: 0.75rem 0.5rem;
+}
+.participants li p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.participants li h6 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.participant_item {
+  display: flex;
+  gap: 1.125rem;
+  align-items: center;
+}
+
+.profile_pic_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.profile_pic_container > .owner_icon {
+  position: absolute;
+  right: -1px;
+  top: -5px;
+}
+
+.participant_name_votes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.participant_name_role {
+}
+
+.participant_votes {
+  background-color: #585a81;
+  padding: 2px 1rem;
+  border-radius: 1rem;
+}
+
+.form_wrapper {
+  width: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 20vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em 0 1em;
+}
+
+.form > fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+}
+
+.form > fieldset > input {
+  font-size: 16px;
+  box-sizing: border-box;
+  /* Additional styles for the input element */
+  color: #333;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.form > fieldset > select {
+  font-size: 16px;
+  box-sizing: border-box;
+  /* Additional styles for select element */
+  color: #333;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.form > button[type="submit"] {
+  margin-top: 16px;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  /* Additional shared styles */
+  color: #333;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+}
