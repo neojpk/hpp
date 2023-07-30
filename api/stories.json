@@ -1,0 +1,222 @@
+[
+    {
+        "id": 35,
+        "ticket": "ENCW-30021",
+        "title": "As a user, I want to view order history",
+        "description": "As a user, I want to access a detailed history of my past orders to track my purchase records.",
+        "story_points": 1,
+        "status": "To do",
+        "assignee": "Ella Patterson",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 36,
+        "ticket": "ENCW-41814",
+        "title": "As an administrator, I want to implement session management",
+        "description": "As an administrator, I want to manage user sessions to maintain security and prevent unauthorized access.",
+        "story_points": 2,
+        "status": "In progress",
+        "assignee": "William Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 37,
+        "ticket": "ENCW-67655",
+        "title": "As a user, I want to filter products by price range",
+        "description": "As a user, I want to set a price range to filter products and find items within my budget.",
+        "story_points": 3,
+        "status": "To do",
+        "assignee": "Penelope Hughes",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 38,
+        "ticket": "ENCW-10946",
+        "title": "As a user, I want to receive push notifications for order updates",
+        "description": "As a user, I want to receive push notifications on my mobile device for updates on order status and delivery.",
+        "story_points": 5,
+        "status": "Completed",
+        "assignee": "Lucas Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 39,
+        "ticket": "ENCW-17711",
+        "title": "As an administrator, I want to enable user feedback",
+        "description": "As an administrator, I want to implement a user feedback system to gather insights for system improvements.",
+        "story_points": 8,
+        "status": "To do",
+        "assignee": "Aria Martinez",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 40,
+        "ticket": "ENCW-29775",
+        "title": "As a user, I want to access customer support",
+        "description": "As a user, I want to have easy access to customer support for assistance with inquiries and issues.",
+        "story_points": 13,
+        "status": "In progress",
+        "assignee": "Noah Foster",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 41,
+        "ticket": "ENCW-45786",
+        "title": "As an administrator, I want to enable social media sharing",
+        "description": "As an administrator, I want to add social media sharing options to allow users to share products and content.",
+        "story_points": 21,
+        "status": "To do",
+        "assignee": "Mia Adams",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 42,
+        "ticket": "ENCW-71561",
+        "title": "As a user, I want to view product availability at nearby stores",
+        "description": "As a user, I want to check product availability at nearby physical stores for in-store purchases.",
+        "story_points": 1,
+        "status": "Completed",
+        "assignee": "Ethan Walker",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 43,
+        "ticket": "ENCW-40348",
+        "title": "As a user, I want to add products to my favorites",
+        "description": "As a user, I want to add products to my favorites list for quick access and future reference.",
+        "story_points": 2,
+        "status": "To do",
+        "assignee": "Hannah Richardson",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 44,
+        "ticket": "ENCW-19876",
+        "title": "As an administrator, I want to implement data encryption",
+        "description": "As an administrator, I want to encrypt sensitive data to ensure secure transmission and storage.",
+        "story_points": 3,
+        "status": "Completed",
+        "assignee": "Alexander James",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 45,
+        "ticket": "ENCW-34474",
+        "title": "As a user, I want to view product images from different angles",
+        "description": "As a user, I want to see multiple images of a product from different angles to get a better view before purchase.",
+        "story_points": 5,
+        "status": "In progress",
+        "assignee": "Elizabeth Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 46,
+        "ticket": "ENCW-54321",
+        "title": "As an administrator, I want to enable guest checkout",
+        "description": "As an administrator, I want to allow guest checkout for users who prefer not to create an account.",
+        "story_points": 8,
+        "status": "To do",
+        "assignee": "James Johnson",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 47,
+        "ticket": "ENCW-80075",
+        "title": "As a user, I want to see product recommendations",
+        "description": "As a user, I want to receive personalized product recommendations based on my browsing and purchase history.",
+        "story_points": 13,
+        "status": "In progress",
+        "assignee": "Grace Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 48,
+        "ticket": "ENCW-98533",
+        "title": "As an administrator, I want to implement user activity logs",
+        "description": "As an administrator, I want to maintain activity logs for users to monitor system usage and detect anomalies.",
+        "story_points": 21,
+        "status": "To do",
+        "assignee": "Daniel Martinez",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 49,
+        "ticket": "ENCW-17388",
+        "title": "As a user, I want to track order delivery on a map",
+        "description": "As a user, I want to track my order's delivery progress on a map in real-time for accurate tracking.",
+        "story_points": 1,
+        "status": "Completed",
+        "assignee": "Sofia Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 50,
+        "ticket": "ENCW-26901",
+        "title": "As a user, I want to receive product recommendations via email",
+        "description": "As a user, I want to receive personalized product recommendations through email for convenient access.",
+        "story_points": 2,
+        "status": "To do",
+        "assignee": "Liam Foster",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 51,
+        "ticket": "ENCW-43789",
+        "title": "As an administrator, I want to implement user reviews moderation",
+        "description": "As an administrator, I want to review and moderate user-submitted product reviews to ensure appropriateness and authenticity.",
+        "story_points": 3,
+        "status": "Completed",
+        "assignee": "Scarlett Walker",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 52,
+        "ticket": "ENCW-67654",
+        "title": "As a user, I want to see recently viewed products",
+        "description": "As a user, I want to view a list of recently viewed products for quick access to previous selections.",
+        "story_points": 5,
+        "status": "In progress",
+        "assignee": "Henry Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 53,
+        "ticket": "ENCW-10009",
+        "title": "As an administrator, I want to enable multi-language support",
+        "description": "As an administrator, I want to provide multi-language support for users in different regions and languages.",
+        "story_points": 8,
+        "status": "To do",
+        "assignee": "Aiden Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    },
+    {
+        "id": 54,
+        "ticket": "ENCW-20087",
+        "title": "As a user, I want to save my cart for later",
+        "description": "As a user, I want to save the contents of my shopping cart to revisit and complete the purchase later.",
+        "story_points": 13,
+        "status": "In progress",
+        "assignee": "Evelyn Turner",
+        "created_at": "2023-07-22",
+        "last_updated": "2023-07-22"
+    }
+]
