@@ -1,7 +1,7 @@
 import { MdSchedule, MdRocketLaunch, MdLink } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-
 import { vote } from "@/store/room";
+
 const Card = ({ active, item }) => {
   const dispatch = useDispatch();
   const points = useSelector((state) => state.room.points);

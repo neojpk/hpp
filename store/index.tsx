@@ -4,8 +4,6 @@ import { Provider as ReduxProvider } from "react-redux";
 
 import user from "./user";
 import room from "./room";
-import story from "./story";
-
 import middleware from "./middleware";
 
 export const store = configureStore({
@@ -15,7 +13,6 @@ export const store = configureStore({
   reducer: {
     user,
     room,
-    story,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().prepend(middleware.middleware),

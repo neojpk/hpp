@@ -1,29 +1,30 @@
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
-import { useSelector, useDispatch } from "react-redux";
-import { ACTIONS, controlAction, prevStory, nextStory } from "@/store/story";
-import { isOwner } from "@/store/user";
-
-import Controls from "@/components/Controls";
 import { useMemo, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { isOwner } from "@/store/user";
+import { ACTIONS, currentStory, action } from "@/store/room";
+import Player from "@/app/room/player";
 
 const Story = () => {
   const dispatch = useDispatch();
-  const onAction = (action) => dispatch(controlAction(action));
+  const onAction = (acc) => dispatch(action(acc));
   const owner = useSelector(isOwner);
-  const { duration, currentStory, action, key } = useSelector(
-    (state) => state.story
-  );
+  const story = useSelector(currentStory);
+  const { duration, key, currentAction } = useSelector((state) => state.room);
 
-  const playing = useMemo(() => action === ACTIONS.PLAY, [action]);
+  const playing = useMemo(
+    () => currentAction === ACTIONS.PLAY,
+    [currentAction]
+  );
 
   return (
     <div className="current-stories">
       <div className="current-stories_heading" style={{ gap: 32 }}>
         <div className="current-stories_headers">
-          <h2>Voting: {currentStory.title}</h2>
-          <h4>{currentStory.description}</h4>
+          <h2>Voting: {story?.title}</h2>
+          <h4>{story?.description}</h4>
         </div>
-        {owner && <Controls currentAction={action} onAction={onAction} />}
+        {owner && <Player onAction={onAction} />}
         <div
           style={{
             display: "flex",
@@ -39,9 +40,7 @@ const Story = () => {
             isPlaying={playing}
             duration={duration}
             colors={[["#93cbb4"]]}
-            onComplete={() => {
-              dispatch(controlAction(ACTIONS.STOP));
-            }}
+            onComplete={() => dispatch(action(ACTIONS.STOP))}
             onUpdate={(remainingTime) => {
               console.log("Remaining time is ", remainingTime);
             }}

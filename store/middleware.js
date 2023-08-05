@@ -1,53 +1,64 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 import room from "@/lib/room";
 import { user } from "./user";
-import { initialize, fetchRoom, vote } from "./room";
 import {
-  controlAction,
-  setStory,
-  setAction,
-  incrementKeyBy,
+  initialize,
+  fetchRoom,
+  vote,
+  action,
+  story,
+  incrementKey,
   ACTIONS,
-} from "./story";
+} from "./room";
 
 // Create the middleware instance and methods
 const listenerMiddleware = createListenerMiddleware();
 
 listenerMiddleware.startListening({
   actionCreator: initialize,
-  effect: async (action, listenerApi) => {
-    listenerApi.dispatch(user(action.payload));
-    listenerApi.dispatch(fetchRoom()).then(({ payload }) => {
-      room().setup();
-      listenerApi.dispatch(setStory(payload.stories.at(0)));
-    });
+  effect: async (action, listener) => {
+    listener.dispatch(user(action.payload));
+    await listener.dispatch(fetchRoom());
+    room.initialize();
   },
 });
 
 listenerMiddleware.startListening({
-  actionCreator: controlAction,
-  effect: (action, listener) => {
+  actionCreator: action,
+  effect: async ({ payload }, listener) => {
     const state = listener.getState();
 
-    switch (action.payload) {
-      case ACTIONS.BACK:
-        console.log({ state });
-        listener.dispatch(setAction(ACTIONS.PAUSE));
-
-      case ACTIONS.NEXT:
-      case ACTIONS.PAUSE:
-      case ACTIONS.PLAY:
-      case ACTIONS.STOP:
-      case ACTIONS.REPLAY:
+    if ([ACTIONS.BACK, ACTIONS.NEXT, ACTIONS.REPLAY].includes(payload)) {
+      listener.dispatch(incrementKey());
     }
 
-    if (action.payload === ACTIONS.REPLAY) {
-      listener.dispatch(setAction(ACTIONS.PLAY));
-      listener.dispatch(incrementKeyBy(1));
-      return;
+    if (payload === ACTIONS.BACK) {
+      if (state.room.story !== 0) {
+        listener.dispatch(story(state.room.story - 1));
+      }
+      listener.dispatch(action(ACTIONS.PAUSE));
     }
 
-    //listener.dispatch(setAction(action.payload));
+    if (payload === ACTIONS.NEXT) {
+      if (state.room.story !== state.room.stories.length - 1) {
+        listener.dispatch(story(state.room.story + 1));
+      }
+      listener.dispatch(action(ACTIONS.PAUSE));
+    }
+
+    if (payload === ACTIONS.REPLAY) {
+      listener.dispatch(action(ACTIONS.PLAY));
+    }
+  },
+});
+
+listenerMiddleware.startListening({
+  actionCreator: story,
+  effect: async ({ payload }, listener) => {
+    const state = listener.getState();
+    const story = state.room.stories[payload];
+
+    console.log({ story });
   },
 });
 
